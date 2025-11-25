@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart Disease Detection System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Panel -->
+    <div class="left-panel">
+      <h1>Heart Disease Detection System</h1>
+      <p class="subtitle">An AI-powered system for early CHD risk prediction & preventive recommendations.</p>
+
+      <form id="chdForm">
+        <div class="form-group">
+          <label> Age:</label>
+          <input type="number" id="age" placeholder="Enter age" min="1">
+        </div>
+        <div class="form-group">
+          <label> Gender:</label>
+          <select id="gender">
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label> Blood Pressure:</label>
+          <input type="number" id="bp" placeholder="Enter BP" min="1">
+        </div>
+        <div class="form-group">
+          <label> Cholesterol:</label>
+          <input type="number" id="cholesterol" placeholder="Enter Cholesterol" min="1">
+        </div>
+        <div class="form-group">
+          <label> Heart Rate:</label>
+          <input type="number" id="hr" placeholder="Enter Heart Rate" min="1">
+        </div>
+        <div class="form-group">
+          <label>Smoking:</label>
+          <select id="smoking">
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label> Diabetes:</label>
+          <select id="diabetes">
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label> BMI:</label>
+          <input type="number" id="bmi" placeholder="Enter BMI" min="1">
+        </div>
+
+        <div class="btn-group">
+          <button type="button" id="predictBtn">Predict Risk</button>
+          <button type="reset" id="resetBtn">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+      <div class="result-card" id="resultCard">
+        <h2>Predicted Risk Level:</h2>
+        <div class="risk-display" id="riskLevel">—</div>
+        <h3>Recommendations:</h3>
+        <ul id="recommendations"></ul>
+      </div>
+      <div class="illustration">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966481.png" alt="Heart AI" />
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
